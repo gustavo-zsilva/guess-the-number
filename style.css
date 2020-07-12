@@ -32,6 +32,10 @@ body {
     align-items: center;
 }
 
+.results p.p1 {
+    color: white;
+}
+
 button.submit {
     display: flex;
     margin-top: 20px;
@@ -45,4 +49,40 @@ button.submit {
 
 .hide {
     display: none;
+}
+
+.dark button {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    padding: 10px;
+    border: none;
+    background-color: rgba(24, 22, 22, 0.829);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.bodydarkmode {
+    background-color: black;
+    transition: 400ms;
+    color: white;
+}
+
+.maindarkmode {
+    transition: 400ms;
+    background-color: rgba(24, 22, 22, 0.829);
+    color: white;
+}
+
+.bodydarkmode {
+    transition: 400ms;
+    background-color: black;
+}
+
+.mainlightmode {
+    transition: 400ms;
+    background-color: white;
+    color: black;
 }

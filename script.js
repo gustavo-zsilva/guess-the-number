@@ -38,7 +38,6 @@ function checkAnswer() {
     restartBtn.addEventListener('click', () => resetAll(msg, tries, allTries))
 
     msg.innerHTML = ''
-    msg.style.color = 'white'
 
     // Se o número de tentativas ainda for válido
     if (counter != 9) {
