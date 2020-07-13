@@ -32,7 +32,7 @@ const names = [
 const ul = document.querySelector('.placar ul')
 // const triesUl = document.querySelector('.tries-table ul')
 
-
+// Popula a lista de placares com o array de objetos 'names'
 for(let i = 0; i <= names.length; i++) {
     let li = document.createElement('li')
     let img = document.createElement('img')
