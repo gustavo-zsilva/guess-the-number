@@ -1,27 +1,27 @@
 const names = [
     {
-        name: "Teste",
+        name: "Carlos",
         ranking: 1,
         border: "gold",
         img: "https://image.flaticon.com/icons/svg/3153/3153108.svg",
         tries: 0
     },
     {
-        name: "Teste2",
+        name: "Yan",
         ranking: 2,
         border: "silver",
         img: "https://image.flaticon.com/icons/svg/3153/3153103.svg",
         tries: 8
     },
     {
-        name: "Teste3",
+        name: "Moraes",
         ranking: 3,
         border: "bronze",
         img: "https://image.flaticon.com/icons/svg/3153/3153106.svg",
         tries: 8
     },
     {
-        name: "Teste4",
+        name: "Teste",
         ranking: 4,
         border: "none",
         img: "https://image.flaticon.com/icons/svg/3100/3100234.svg",
