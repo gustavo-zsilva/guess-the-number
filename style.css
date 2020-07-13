@@ -6,6 +6,13 @@ body {
     background-color: #f5f5f5;
 }
 
+.js-img {
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-right: 10px;
+}
+
 .container {
     max-width: 700px;
     margin: 100px auto;
@@ -16,14 +23,55 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
 }
 
+footer.footer {
+    position: absolute;
+    display: flex;
+
+    left: 0;
+    right: 0;
+    margin-top: 100px;
+
+    background-color: black;
+    color: gray;
+    justify-content: center;
+    
+}
+
+footer.footer p {
+    padding: 10px;
+    text-align: center;
+    margin-right: auto;
+    
+}
+
+footer.footer p .italic {
+    font-style: italic;
+    margin-right: 50px;
+}
+
 .text p {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.game .submit {
+#number {
+    background-color: rgba(128, 128, 128, 0.192);
+    border: 1px solid gray;
+    margin-left: 5px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.048);
+}
+
+.game button.submit {
     margin: 30px auto;
     cursor: pointer;
+    display: flex;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.459);
+    border: 1px solid gray;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.048);
 }
 
 .results {
@@ -34,12 +82,6 @@ body {
 
 .results p.p1 {
     color: white;
-}
-
-button.submit {
-    display: flex;
-    margin-top: 20px;
-    padding: 10px;
 }
 
 .p1, .tries, .all-tries {
@@ -85,4 +127,67 @@ button.submit {
     transition: 400ms;
     background-color: white;
     color: black;
+}
+
+/* Placar */
+
+.placar {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid rgba(128, 128, 128, 0.356);
+    border-radius: 6px;
+}
+
+.placar legend {
+    text-align: center;
+    font-size: 35px;
+}
+
+.placar ul {
+    column-count: 2;
+    list-style-type: none;
+
+}
+
+.placar ul li {
+    padding-bottom: 20px;
+    margin: 0;
+    font-size: 18px;
+    border: 2px solid rgba(255, 255, 0, 0.26);
+    border-radius: 4px;
+    padding: 10px;
+    max-width: 70%;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.103);
+
+
+}
+
+.tries-table {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid rgba(128, 128, 128, 0.356);
+    border-radius: 6px;
+    margin-top: 50px;
+
+}
+
+.tries-table legend {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(61, 60, 60);
+}
+
+.tries-table ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.tries-table ul li {
+    text-align: center;
+    background-color: rgba(0, 128, 0, 0.685);
+    padding: 15px;
+    color: white;
 }

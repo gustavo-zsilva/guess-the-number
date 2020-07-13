@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>Adivinhe um número</title>
 </head>
 <body>
     <div class="container">
-        <header><h1>Jogo Adivinhe um número</h1></header>
+        <header><h1>Jogo: Adivinhe um número</h1></header>
         <section class="text">
             <p>
                 Selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar em 10 chances ou menos. Lhe diremos se seu palpite está com valor alto ou baixo.
@@ -17,7 +18,7 @@
 
         <section class="game">
             <form action="#">
-                <label for="number">Digite seu palpite: </label> <input type="number" name="number" id="number" min="1" max="100" required>
+                <label for="number">Digite seu palpite: </label> <input type="number" name="number" id="number" min="1" max="100" placeholder="1-100" required>
                 <button class="submit">Enviar palpite</button>
             </form>
 
@@ -36,7 +37,33 @@
         <button>Dark Mode</button>
     </section>
 
-    <script src="script.js" defer></script>
-    <script src="darkmode.js" defer></script>
+    
+        <fieldset class="placar"> 
+            <legend>Placar</legend>  
+            <ul>
+
+            </ul>
+        </fieldset>
+
+        <fieldset class="tries-table">
+            <legend>Tentativas</legend>
+            <ul>
+                <li>
+                    <p>--Próxima atualização--</p>
+                    <p>Reportem os bugs que acharem!</p>
+                </li>
+                
+            </ul>
+        </fieldset>
+
+        <footer class="footer">
+            <p> <span class="italic">Gustavo Silva</span> Instagram: <span class="italic">gustavo_zsilva</span> </p>
+            
+        </footer>
+  
+
+    <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/darkmode.js" defer></script>
+    <script src="/scripts/placar.js" defer></script>
 </body>
 </html>
