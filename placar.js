@@ -7,22 +7,30 @@ const names = [
         tries: 0
     },
     {
-        name: "Jorge",
+        name: "Samuel Zonta",
         ranking: 2,
         border: "silver",
         img: "https://image.flaticon.com/icons/svg/3153/3153103.svg",
         tries: 7
     },
     {
-        name: "Yan",
+        name: "Jorge",
         ranking: 3,
         border: "bronze",
         img: "https://image.flaticon.com/icons/svg/3153/3153106.svg",
+        tries: 7
+
+    },
+    {
+        name: "Yan",
+        ranking: 4,
+        border: "none",
+        img: "https://image.flaticon.com/icons/svg/3100/3100234.svg",
         tries: 8
     },
     {
         name: "Moraes",
-        ranking: 4,
+        ranking: 5,
         border: "none",
         img: "https://image.flaticon.com/icons/svg/3100/3100234.svg",
         tries: 8
@@ -30,10 +38,31 @@ const names = [
 ]
 
 const ul = document.querySelector('.placar ul')
-// const triesUl = document.querySelector('.tries-table ul')
+const triesUl = document.querySelector('.tries-table ul')
+
+// Popula as tentativas 
+for(let i = 0; i <= names.length - 1; i++) {
+    // console.log(names[i].name);
+    let li = document.createElement('li')
+
+    li.innerHTML = `${names[i].ranking}º : ${names[i].name} --- ${names[i].tries} tentativas`
+
+
+    if (names[i].ranking === 1) {
+        renderAttributes(li, 'rgb(247, 247, 39)', '255, 255, 0, 0.26', '255, 255, 0, 0.623')
+    } else if (names[i].ranking === 2) {
+        renderAttributes(li, 'gray', '128, 128, 128, 0.100', '128, 128, 128, 0.363')
+    } else if (names[i].ranking === 3) {
+        renderAttributes(li, 'brown', '165, 42, 42, 0.100', '165, 42, 42, 0.233')
+    } else {
+        renderAttributes(li, '', '0, 0, 0, 0.05', '0, 0, 0, 0.103')
+    }
+
+    triesUl.appendChild(li)
+}
 
 // Popula a lista de placares com o array de objetos 'names'
-for(let i = 0; i <= names.length; i++) {
+for(let i = 0; i <= names.length - 1; i++) {
     let li = document.createElement('li')
     let img = document.createElement('img')
   
@@ -52,15 +81,11 @@ for(let i = 0; i <= names.length; i++) {
 
         renderAttributes(li, 'gray', '128, 128, 128, 0.100', '128, 128, 128, 0.363')
 
-        
-
     } else if (names[i].border == "bronze") {
         img.src = names[i].img
         img.classList.add('js-img')
 
         renderAttributes(li, 'brown', '165, 42, 42, 0.100', '165, 42, 42, 0.233')
-
-        
 
     } else {
         img.src = names[i].img
@@ -70,11 +95,9 @@ for(let i = 0; i <= names.length; i++) {
 
     }
 
-
     li.appendChild(img)
     ul.appendChild(li)  
 }
-
 
 
 function renderAttributes(li, border, bgcolor, boxshadow) {
